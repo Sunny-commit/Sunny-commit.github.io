@@ -52,6 +52,13 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
 }
 
+.subsection-title {
+    font-size: 1.8rem;
+    margin: 3rem 0 2rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
 p {
     color: var(--text-light);
     font-size: 1rem;
@@ -404,6 +411,230 @@ p {
     50% { transform: scale(1.05); }
 }
 
+/* ===== Internships Section ===== */
+.internships {
+    padding: 60px 20px;
+    background: var(--light-bg);
+}
+
+.internships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.internship-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.internship-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.internship-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.internship-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.internship-org {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.internship-project {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.internship-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.internship-list li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.internship-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: 700;
+}
+
+.cert-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    margin-top: auto;
+}
+
+.cert-link:hover {
+    color: var(--secondary-color);
+    transform: translateX(4px);
+}
+
+/* ===== Certifications Section ===== */
+.certifications-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.cert-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.cert-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cert-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.cert-item p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ===== Education Section ===== */
+.education {
+    padding: 60px 20px;
+    background: white;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.education-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.education-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.education-school {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.education-duration {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.education-details {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.education-details p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.education-details p:last-child {
+    margin-bottom: 0;
+}
+
 /* ===== Projects Section ===== */
 .projects {
     padding: 60px 20px;
@@ -649,7 +880,30 @@ p {
 .contact-subtitle {
     text-align: center;
     font-size: 1.2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-info-details {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 12px;
+}
+
+.contact-info-details p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.contact-info-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info-details a:hover {
+    text-decoration: underline;
 }
 
 .contact-links {
@@ -780,6 +1034,18 @@ p {
         grid-template-columns: 1fr;
     }
 
+    .internships-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -824,6 +1090,14 @@ p {
     }
 
     .contact-links {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
         grid-template-columns: 1fr;
     }
 }
